@@ -23,17 +23,17 @@ function renderButtons() {
 
 function createbtn(mName) {
     var b = $("<button>");
-    b.attr("class", "bMovie");
+    b.attr("class", "bsearch");
     b.text(mName);
     $("#buttons-view").append(b);
 }
 
-$(document).on("click", ".bMovie", function () {
+$(document).on("click", ".bsearch", function () {
     $(gifs).empty();
     var gname = $(this).text();
 
     var gifapi =
-        "http://api.giphy.com/v1/gifs/search?q=" +
+        "https://api.giphy.com/v1/gifs/search?q=" +
         gname +
         "&api_key=wzyt31vpNEDRJvaCFgiyX1EhWGHvzqI6";
 
@@ -61,13 +61,14 @@ $(document).on("click", ".bMovie", function () {
 });
  
 $("#add-Search").on("click", function () {
+
     var sn = $("#Search-input").val();
 
     garry.push(sn);
     createbtn(sn);
 
     event.preventDefault();
-    $("#movie-input").val("");
+    $("#Search-input").val("");
 });
 
 renderButtons();
