@@ -4,6 +4,8 @@ body{
     background-size: cover;
 }
 
+
+
 /* Navigation */
 
 .sidenav {
@@ -105,4 +107,11 @@ img{
 
 p{
   margin-left: 47px;
+}
+/* Loading img */
+#loading{
+  display: none;
+    margin: 109px 16px 0 453px;
+    position: fixed;
+
 }

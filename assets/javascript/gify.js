@@ -32,6 +32,13 @@ $(document).on("click", ".bsearch", function () {
     $(gifs).empty();
     var gname = $(this).text();
 
+    // Loading img
+    $("#loading").css("display","block");
+    setTimeout(() => {
+        $("#loading").css("display","none");
+    }, 800);
+   
+
     var gifapi =
         "https://api.giphy.com/v1/gifs/search?q=" +
         gname +
@@ -41,6 +48,8 @@ $(document).on("click", ".bsearch", function () {
         url: gifapi,
         method: "GET"
     }).then(function (gif) {
+      
+      setTimeout(() => {
         var results = gif.data;
 
         for (var i = 0; i < gif.data.length; i++) {
@@ -57,6 +66,8 @@ $(document).on("click", ".bsearch", function () {
             $("#gifs").append(p);
             $("#gifs").append(image);
         }
+      }, 900);
+       
     });
 });
  
