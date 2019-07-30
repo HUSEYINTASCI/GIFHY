@@ -1,10 +1,7 @@
-
-body{
-    background-image: url("../images/backgraund.jpg");
-    background-size: cover;
+body {
+  background-image: url("../images/backgraund.jpg");
+  background-size: cover;
 }
-
-
 
 /* Navigation */
 
@@ -41,9 +38,10 @@ body{
   font-size: 36px;
   margin-left: 50px;
 }
-span{
+span {
   position: fixed;
 }
+/* nav @medi */
 
 @media screen and (max-height: 450px) {
   .sidenav {
@@ -69,49 +67,54 @@ span{
   border: 3px solid #ccc;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  
 }
 
 #Search-input:focus {
-  border: 3px solid #4CAF50;
+  border: 3px solid #4caf50;
 }
 /* Buttons */
-.bsearch{
-    margin: 5px;
-    border: 2px solid black;
-    background-color: white;
-    color: black;
-    padding: 14px 28px;
-    font-size: 16px;
-    cursor: pointer;
+.bsearch {
+  margin: 5px;
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
 }
 .bsearch {
-  border-color: #4CAF50;
+  border-color: #4caf50;
   color: green;
 }
 
 .bsearch:hover {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
 }
 
-
-img{
-
+/* Gif images */
+.image {
   width: 400px;
   height: 216px;
   margin: 12px;
   border-radius: 40px;
-
 }
 
-p{
+p {
   margin-left: 47px;
 }
+/* Search input */
+label {
+  text-align: center;
+  font-size: xx-large;
+  color: white;
+  margin-left: 59px;
+}
 /* Loading img */
-#loading{
+#loading {
   display: none;
-    margin: 109px 16px 0 453px;
-    position: fixed;
-
+  margin: 109px 16px 0 453px;
+  position: fixed;
+  width: 279px;
+  border-radius: 191px;
 }
