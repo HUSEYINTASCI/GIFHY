@@ -7,6 +7,21 @@ function closeNav() {
   document.getElementById("gifnav").style.width = "0";
 }
 
+// Scroll up image  ---------------------------------------------------------------
+$(window).scroll(function() {
+  var topPos = $(this).scrollTop();
+  if (topPos > 100) {
+    $("#upbtn").css("opacity", "1");
+  } else {
+    $("#upbtn").css("opacity", "0");
+  }
+});
+// Click up
+$("#upbtn").on("click", function() {
+  $(document).scrollTop(0);
+});
+//-----------------------------------------------------------------------------------
+
 //Onload page first buttons
 var garry = ["San Francisco", "Apple", "Google", "Facebook"];
 
