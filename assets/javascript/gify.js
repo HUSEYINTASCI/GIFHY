@@ -56,7 +56,7 @@ $(document).on("click", ".bsearch", function() {
     "https://api.giphy.com/v1/gifs/search?q=" +
     gname +
     "&api_key=wzyt31vpNEDRJvaCFgiyX1EhWGHvzqI6";
-
+      
   $.ajax({
     url: gifapi,
     method: "GET"
@@ -99,6 +99,17 @@ $("#add-Search").on("click", function() {
   }
 });
 
+//Search if press enter
+$("#Search-input").on("keydown", function (e) {
+  var key = e.which;
+  switch (key) {
+  case 13:  
+$("#add-Search").click();
+    break;
+  default:
+    break;
+  }
+});
 // Images animation start click
 $(document).on("click", ".image", function() {
   var ds = $(this).attr("data-state");
