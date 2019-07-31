@@ -41,7 +41,7 @@ body {
 span {
   position: fixed;
 }
-/* nav @medi */
+/* nav @media */
 
 @media screen and (max-height: 450px) {
   .sidenav {
@@ -158,4 +158,21 @@ label {
   position: absolute;
   margin: 77px 0 0 450px;
   font-size: medium;
+}
+
+/* @media */
+@media screen and (max-width: 600px) {
+  #gifs {
+    margin: 153px 0 0 0;
+  }
+  #btnname {
+    margin: 52px 0 0 144px;
+  }
+  #total {
+    margin: 103px 0 0 161px;
+  }
+  #loading {
+    margin: 296px 0 0 154px;
+    width: 160px;
+  }
 }
