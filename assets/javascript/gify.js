@@ -10,7 +10,7 @@ function closeNav() {
 // Scroll up image  ---------------------------------------------------------------
 $(window).scroll(function() {
   var topPos = $(this).scrollTop();
-  if (topPos > 100) {
+  if (topPos > 10) {
     $("#upbtn").css("opacity", "1");
   } else {
     $("#upbtn").css("opacity", "0");
@@ -79,6 +79,8 @@ function show() {
         // Creating 2 information
         var p = $("<p>").text("Rating: " + rating);
         var p2 = $("<p>").text("Import Date: " + rating2);
+        //Total Results
+        $("#total").text("Total Results= " + gif.pagination.count);
         // Creating Images
         var image = $("<img>");
 
@@ -109,7 +111,8 @@ $(document).on("click", ".bsearch", function() {
 
 // Creating new button
 $("#add-Search").on("click", function() {
- 
+  // refresh var limit
+  limit = 10;
   var sn = $("#Search-input").val();
   if (sn == "") {
     alert("Please fill out search text.");
@@ -123,9 +126,7 @@ $("#add-Search").on("click", function() {
       createbtn(sn);
       $("#Search-input").val("");
     }
-  
   }
- 
 });
 
 //Search if press enter

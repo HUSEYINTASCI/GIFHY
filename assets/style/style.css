@@ -53,7 +53,7 @@ span {
 }
 
 #gifs {
-  margin: 95px 1px 0 286px;
+  margin: 130px 0 0 286px;
   width: 859px;
   height: 601px;
   position: absolute;
@@ -120,7 +120,7 @@ label {
 #upbtn {
   transform: rotate(-90deg);
   width: 136px;
-  margin: 612px 0 0 680px;
+  margin: 31px 0 0 190px;
   position: fixed;
   opacity: 0;
   transition: all 0.4s ease-in-out 0s;
@@ -152,4 +152,10 @@ label {
   border-color: #4caf50;
   color: green;
   opacity: 0;
+}
+/* Total Results */
+#total {
+  position: absolute;
+  margin: 77px 0 0 450px;
+  font-size: medium;
 }
