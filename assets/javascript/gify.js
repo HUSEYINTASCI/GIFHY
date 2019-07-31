@@ -33,18 +33,26 @@ function renderButtons() {
     createbtn(garry[i]);
   }
 }
-
+// Cread button
 function createbtn(mName) {
   var b = $("<button>");
   b.attr("class", "bsearch");
   b.text(mName);
   $("#buttons-view").append(b);
 }
+var limit = 10;
+var gname;
 
-$(document).on("click", ".bsearch", function() {
+// Add more button
+$(document).on("click", "#limit", function() {
+  limit = limit + 10;
   $(gifs).empty();
-  var gname = $(this).text();
+  gname = $("h1").text();
+  show();
+});
 
+// Show function created gifs
+function show() {
   // Loading img
   $("#loading").css("display", "block");
   setTimeout(() => {
@@ -55,8 +63,9 @@ $(document).on("click", ".bsearch", function() {
   var gifapi =
     "https://api.giphy.com/v1/gifs/search?q=" +
     gname +
-    "&api_key=wzyt31vpNEDRJvaCFgiyX1EhWGHvzqI6";
-      
+    "&api_key=wzyt31vpNEDRJvaCFgiyX1EhWGHvzqI6&limit=" +
+    limit;
+
   $.ajax({
     url: gifapi,
     method: "GET"
@@ -81,37 +90,50 @@ $(document).on("click", ".bsearch", function() {
 
         $("#gifs").append(p, p2);
         $("#gifs").append(image);
+        $("#btnname").text(gname);
+        $("#limit").css("opacity", "1");
+        closeNav();
       }
     }, 900);
   });
+}
+
+//  After created button search
+$(document).on("click", ".bsearch", function() {
+  var btnname = $(this).text();
+  $("h1").text(btnname);
+  $(gifs).empty();
+  gname = btnname;
+  show();
 });
 
+// Creating new button
 $("#add-Search").on("click", function() {
   var sn = $("#Search-input").val();
-  if (sn == ""){
+  if (sn == "") {
     alert("Please fill out search text.");
   } else {
-    if($.inArray(sn,garry)!==-1){
+    if ($.inArray(sn, garry) !== -1) {
       alert("You Already have it");
       $("#Search-input").val("");
-  }else{
+    } else {
       garry.push(sn);
       createbtn(sn);
       $("#Search-input").val("");
-  }
-  event.preventDefault();
+    }
+    event.preventDefault();
   }
 });
 
 //Search if press enter
-$("#Search-input").on("keydown", function (e) {
+$("#Search-input").on("keydown", function(e) {
   var key = e.which;
   switch (key) {
-  case 13:  
-$("#add-Search").click();
-    break;
-  default:
-    break;
+    case 13:
+      $("#add-Search").click();
+      break;
+    default:
+      break;
   }
 });
 // Images animation start click

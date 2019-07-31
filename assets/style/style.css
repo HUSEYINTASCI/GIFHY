@@ -77,12 +77,9 @@ span {
   margin: 5px;
   border: 2px solid black;
   background-color: white;
-  color: black;
   padding: 14px 28px;
   font-size: 16px;
   cursor: pointer;
-}
-.bsearch {
   border-color: #4caf50;
   color: green;
 }
@@ -120,12 +117,39 @@ label {
 }
 
 /* Scroll Up */
-#upbtn{
-
+#upbtn {
   transform: rotate(-90deg);
-    width: 136px;
-    margin: 612px 0 0 680px;
-    position: fixed;
-    opacity: 0;
+  width: 136px;
+  margin: 612px 0 0 680px;
+  position: fixed;
+  opacity: 0;
   transition: all 0.4s ease-in-out 0s;
+}
+/* h1 name */
+#btnname {
+  margin: 32px 0 0 406px;
+  position: absolute;
+}
+/* add button */
+#add-Search {
+  margin: 5px;
+  border: 2px solid black;
+  background-color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  border-color: #4caf50;
+  color: green;
+}
+/* add more button */
+#limit {
+  margin: 5px;
+  border: 2px solid black;
+  background-color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  border-color: #4caf50;
+  color: green;
+  opacity: 0;
 }
