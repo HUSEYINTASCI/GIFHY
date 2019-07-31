@@ -88,14 +88,18 @@ $(document).on("click", ".bsearch", function() {
 
 $("#add-Search").on("click", function() {
   var sn = $("#Search-input").val();
-  if (sn == "") {
+  if (sn == ""){
     alert("Please fill out search text.");
   } else {
-    garry.push(sn);
-    createbtn(sn);
-
-    event.preventDefault();
-    $("#Search-input").val("");
+    if($.inArray(sn,garry)!==-1){
+      alert("You Already have it");
+      $("#Search-input").val("");
+  }else{
+      garry.push(sn);
+      createbtn(sn);
+      $("#Search-input").val("");
+  }
+  event.preventDefault();
   }
 });
 
