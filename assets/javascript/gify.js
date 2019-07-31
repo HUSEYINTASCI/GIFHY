@@ -109,9 +109,11 @@ $(document).on("click", ".bsearch", function() {
 
 // Creating new button
 $("#add-Search").on("click", function() {
+ 
   var sn = $("#Search-input").val();
   if (sn == "") {
     alert("Please fill out search text.");
+    e.event.preventDefault();
   } else {
     if ($.inArray(sn, garry) !== -1) {
       alert("You Already have it");
@@ -121,8 +123,9 @@ $("#add-Search").on("click", function() {
       createbtn(sn);
       $("#Search-input").val("");
     }
-    event.preventDefault();
+  
   }
+ 
 });
 
 //Search if press enter
