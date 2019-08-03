@@ -138,7 +138,9 @@ $("#Search-input").on("keydown", function(e) {
       break;
     default:
       break;
+
   }
+  event.preventDefault();
 });
 // Images animation start click
 $(document).on("click", ".image", function() {
