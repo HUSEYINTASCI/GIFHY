@@ -111,6 +111,7 @@ $(document).on("click", ".bsearch", function() {
 
 // Creating new button
 $("#add-Search").on("click", function() {
+
   // refresh var limit
   limit = 10;
   var sn = $("#Search-input").val();
@@ -125,23 +126,12 @@ $("#add-Search").on("click", function() {
       garry.push(sn);
       createbtn(sn);
       $("#Search-input").val("");
+     
     }
   }
+  
 });
 
-//Search if press enter
-$("#Search-input").on("keydown", function(e) {
-  var key = e.which;
-  switch (key) {
-    case 13:
-      $("#add-Search").click();
-      break;
-    default:
-      break;
-
-  }
-  event.preventDefault();
-});
 // Images animation start click
 $(document).on("click", ".image", function() {
   var ds = $(this).attr("data-state");
