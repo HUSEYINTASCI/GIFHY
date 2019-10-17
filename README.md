@@ -9,4 +9,4 @@ Link: https://huseyintasci.github.io/GIFHY/
 
 Page
 ===
-![alt text]https://github.com/HUSEYINTASCI/GIFHY/blob/master/assets/images/Page.PNG)
+![alt text](https://github.com/HUSEYINTASCI/GIFHY/blob/master/assets/images/Page.PNG)
